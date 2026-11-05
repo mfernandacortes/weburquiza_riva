@@ -1,0 +1,19 @@
+SITIO SECUNDARIO + PANEL DE NOVEDADES (proyecto integrado)
+
+1) Copiá la carpeta "claude" dentro de C:\xampp\htdocs\ (queda C:\xampp\htdocs\claude\secundario\...).
+
+2) En XAMPP, iniciá Apache y MySQL.
+
+3) La conexión usa la base EXISTENTE "secundario", usuario root, contraseña vacía.
+   Si root tiene contraseña, editá claude/secundario/models/conexion.php.
+
+4) En phpMyAdmin, base "secundario", pestaña SQL: ejecutá novedades.sql.
+   Si la tabla novedades ya existía sin la columna "activo", ejecutá la línea ALTER TABLE
+   que está comentada al final del archivo.
+
+5) Sitio público:  http://localhost/claude/secundario/
+   Panel admin:    http://localhost/claude/secundario/admin/login.php
+   Usuario: admin   Contraseña inicial: Admin123!
+
+La sección "Novedades" del sitio muestra solo las novedades marcadas como Activas,
+de la más reciente (mayor ID) a la más antigua.
